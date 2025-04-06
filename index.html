@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MissU Burger</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">MissU Burger</div>
+            <ul class="nav-links">
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to MissU Burger</h1>
+            <p>The best burgers in town!</p>
+            <a href="#menu" class="cta-button">Explore Menu</a>
+        </div>
+    </section>
+    
+    <section id="menu" class="menu-slider">
+        <h2 class="menu-slider-h2">Our Burger Menu</h2>
+        <div class="slider">
+            <div class="slide active" style="background-image: url('Assets/classic\ vege\ burger.jpg');">
+                <div class="slide-title">Classic Vege Burger</div>
+            </div>
+
+            <div class="slide" style="background-image: url('Assets/cheese\ burger2.jpg');">
+                <div class="slide-title">Cheese Burger</div>
+            </div>
+
+            <div class="slide" style="background-image: url('Assets/1burger\ 1softdrinks.jpg');">
+                <div class="slide-title">Special Offer today buy one get one of any two types of burger.</div>
+            </div>
+
+            <div class="slide" style="background-image: url('Assets/4pcs\ burger\ 1fries\ with\ 4\ softdrinks.jpg');">
+                <div class="slide-title">Family Bundle 4pcs Burger, 4pcs Fries, 4pcs Softdrinks, For The Price of 560 pesos only.</div>
+            </div>
+        </div>
+
+        <div class="slider-controls">
+            <button id="prev">&lt;</button>
+            <button id="next">&gt;</button>
+        </div>
+        <button class="order-button" id="orderButton">Order Now</button>
+    </section>
+
+    <section id="about" class="about-us">
+        <h2>About Us</h2>
+        <p>At MissU Burger, our mission is simple yet profound: to craft the ultimate burger experience for our customers. With a commitment to using only the freshest and highest quality ingredients, sourced locally to support our community, we take pride in every burger we serve.
+
+            What sets us apart is not just the taste of our burgers but the passion and dedication of our chefs. They're not merely cooks; they're artists, meticulously selecting each ingredient, from the juicy patty to the crisp lettuce, to ensure every bite is a burst of flavor and satisfaction.
+            
+            Our menu is a testament to our love for burgers. From classic cheeseburgers that bring back nostalgic memories to innovative creations that push the boundaries of taste, we cater to every burger lover's palate. Vegetarian or meat lover, there's a burger at MissU Burger that will make your taste buds dance with joy.
+            
+            But our commitment doesn't stop at the food itself. We believe in creating an experience, a moment of joy and indulgence for our customers. That's why our restaurants are designed with care, providing a welcoming and comfortable environment where you can enjoy your burger with friends and family.
+            
+            It's not just about the food; it's about the entire journey—from the moment you walk in, greeted by the aroma of sizzling burgers, to the first bite that leaves you wanting more. We want every visit to MissU Burger to be memorable, filled with laughter, good food, and great company.
+            
+            Our dedication to quality extends beyond our burgers to our customer service. We value your feedback and strive to ensure every visit exceeds your expectations. Whether it's a special request for customization or a friendly chat with our staff, we're here to make your experience unforgettable.
+            
+            At MissU Burger, we're not just a restaurant; we're a community of burger enthusiasts united by our love for delicious food and shared moments. Join us on this flavorful journey, and let us delight your taste buds with our mouthwatering burgers. Because at MissU Burger, every burger tells a story of passion, quality, and joy.</p>
+    </section>
+    
+     
+     <section id="contact" class="contact-us">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or feedback, please feel free to reach out to us using the form below.</p>
+        <form id="contactForm">
+            <label for="contact-name">Name:</label>
+            <input type="text" id="contact-name" name="contact-name" required>
+            <label for="contact-email">Email:</label>
+            <input type="email" id="contact-email" name="contact-email" required>
+            <label for="contact-message">Message:</label>
+            <textarea id="contact-message" name="contact-message" rows="5" required></textarea>
+            <div class="form-buttons">
+            <button type="submit">Send Message</button>
+            <button type="button" id="contactCancelButton">Cancel</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 MissU Burger. All rights reserved.</p>  
+    </footer>
+
+    
+    <div id="orderFormPopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Order Form</h2><br>
+            <form id="orderForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <label for="address">Home Address:</label>
+                <input type="text" id="address" name="address" required>
+                <br>
+                <label for="mobile number">Mobile Number:</label>
+                <input type="tel" id="mobile number" name="mobile number" required  placeholder="09-" maxlength="11">
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="jundelacruz@gmail.com" required>
+                <br>
+                <label for="quantity">Quantity: <span id="count">1</span></label>
+                <input type="number" id="quantity" name="quantity" min="0" max="50" value="1">
+                <button type="button" id="increaseCount-Btn">+</button>
+                <button type="button" id="decreaseCount-Btn">-</button>
+                <button type="button" id="resetCount-Btn">Reset</button>
+                <br>
+                <label for="burger">Food Type:</label>
+                <select id="burger" name="burger" required>
+                    <option value="1pcs classic vage burger">1pcs Classic Vage Burger &#8369;80</option>
+                    <option value="1pcs cheese burger">1pcs Cheese Burger &#8369;60</option>
+                    <option value="1pcs softdrinks">1pcs Softdrinks &#8369;20</option>
+                    <option value="1pcs fries">1pcs Fries Regular &#8369;40</option>
+                    <option value="1pcs jumbo fries">1pcs Jumbo Fries &#8369;130</option>
+                    <option value="1pcs Cheese burger 1pcs softdrinks">1pcs Cheese Burger 1pcs Softdrinks &#8369;100</option>
+                    <option value="1pcs Cheese buger 1pcs fries 1pcs softdrinks">1pcs Cheese buger 1pcs fries 1pcs softdrinks &#8369;140</option>
+                    <option value="1pcs Vage burger 1pcs softdrinks">1pcs Classic Vage Burger 1pcs Softdrinks &#8369;100</option>
+                    <option value="1pcs Vage buger 1pcs fries 1pcs softdrinks">1pcs Classic Vage buger 1pcs fries 1pcs softdrinks &#8369;140</option>
+                    <option value="4pcs burger 4pcs fries 4pcs softdrinks">4pcs Vage Burger 4pcs Regular Fries 4pcs Softdrinks &#8369;560</option>
+                    <option value="4pcs burger 4pcs fries 4pcs softdrinks">4pcs Cheese Burger 4pcs Regular Fries 4pcs Softdrinks &#8369;480</option>
+                </select>
+                <br>
+                <label for="payment">Payment Method:</label>
+                    <select id="payment" name="payment">
+                        <option value="cod">Cash on delivery</option>
+                        <option value="gcash">Gcash</option>
+                        <option value="maya">Maya</option>
+                        <option value="grab">Grab</option>
+                        <option value="visa">Visa</option>
+                        <option value="mastercard">Mastercard</option>
+                    </select>
+                        <button type="submit">Buy</button>
+                        <button type="button" id="cancelButton">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

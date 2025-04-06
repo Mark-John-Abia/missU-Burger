@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+.logo {
+    background: linear-gradient(to right, orange, tomato, green, #AB7A49);
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 4px solid #fff;
+    border-radius: 60px;
+    outline: 2px solid #ff5733;
+    text-shadow: -2px -2px 0 black, -2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+
+.nav-links a[href="#menu"]:hover,
+.nav-links a[href="#about"]:hover,
+.nav-links a[href="#contact"]:hover {
+    color: #AB7A49;
+} 
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    background-image: url('Assets/herobackground.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: end;
+    padding: 250px 100px;
+    font-size: 27px;
+    font-weight: bold;
+    text-shadow: 0 0 130px rgba(1, 1, 1, 1);
+    text-decoration: underline #ff5733;
+}
+
+.hero h1,
+.hero p {
+    text-shadow:  -2px -2px 0 black, -2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-button {
+    background-color: #ff5733;
+    font-size: 21px;
+    color: white;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #AB7A49;
+}
+
+#orderButton:hover {
+    background-color: #AB7A49;
+}
+
+#prev:hover,
+#next:hover {
+    background-color: #AB7A49;
+}
+
+
+.menu-slider {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('Assets/background-wooden.jpg');
+}
+
+.menu-slider-h2 {
+    color: #fff;
+}
+
+.slider {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+    color: #fff;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide-title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.slider-controls button {
+    background-color: #ff5733;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.about-us {
+    text-align: center;
+    padding: 50px 20px;
+    color: #f8f8f8;
+    background-color: #333;
+}
+
+
+.contact-us {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #333;
+    color: #f8f8f8;
+}
+
+
+#contact p {
+    margin-bottom: 30px;
+}
+
+.contact-us form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: #333;
+    border: 2px solid #f8f8f8;
+    padding: 20px 20px;
+}
+
+.contact-us label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-us input,
+.contact-us textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-us button {
+    background-color: #ff5733;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.contact-us button:hover {
+    background-color: #AB7A49;
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    border: 1px solid #ff5733;
+}
+
+
+.order-button {
+    background-color: #ff5733;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 100px;
+    border-radius: 5px;
+    font-size: 13px;
+    position: relative;
+}
+
+.popup-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.popup-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-content form label,
+.popup-content form input,
+.popup-content form select,
+.popup-content form button {
+    margin-bottom: 10px;
+}
+
+.popup-content form button {
+    background-color: #ff5733;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.popup-content form button[type="button"] {
+    background-color: #ccc;
+    color: #333;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    /* Styles for extra small devices */ 
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    /* Styles for small devices */ 
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    /* Styles for medium devices */ 
+}
+
+/* Laptops (min-width: 1024px and max-height: 1310px) */
+@media screen and (min-width: 1024px) and (max-height: 1310px) {
+    /* Styles for laptops */ 
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    /* Styles for large devices */ 
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    /* Styles for extra large devices */ 
+}
